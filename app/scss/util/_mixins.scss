@@ -1,0 +1,27 @@
+$large: 1400px;
+$tablet: 1120px;
+$mobile: 764px;
+
+@mixin large {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin flex($dir, $justufy, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justufy;
+  align-items: $align;
+}

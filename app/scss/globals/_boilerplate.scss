@@ -1,0 +1,38 @@
+@use "../util/" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #100e1d;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+i {
+  font-size: 3rem;
+  color: var(--grey);
+}
+
+img {
+  width: 100%;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <script src="./app/script/script.js" defer></script>
+    <link rel="stylesheet" href="./dist/index.css" />
+    <script
+      src="https://kit.fontawesome.com/288c60e200.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="shortcut icon" href="../devchallenges.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  
+    <section class="current">
+      <div class="current__search">
+        <button class="current__search-btn" data-nav-btn>Search for places</button>
+        <i class="fa-solid fa-location-crosshairs"></i>
+      </div>
+      <div class="current__weather">
+        <div class="current__weather-icon">
+          <img src="" alt="weather-icon" data-icon />
+        </div>
+        <div class="current__weather-temp">
+          <span class="digit" data-temp></span><span class="unit" data-unit>&deg;C</span>
+        </div>
+        <span class="current__weather-term" data-description></span>
+        <div class="current__weather-more_info" data-more></div>
+      </div>
+      <nav class="nav" data-nav>
+      <div class="nav__close" data-close><i class="fa-solid fa-xmark"></i></div>
+      <div class="nav__search__field">
+        <input type="search" name="city" id="city" placeholder="search location" data-search-input autocomplete="off">
+        <button class="nav__btn" data-search-btn>Search</button>
+      </div>
+    </nav>
+    </section>
+    <section class="more_info">
+      <div class="units">
+        <div class="units__celsius active" data-celsius>&deg;C</div>
+        <div class="units__farenheit" data-farenheit>&deg;F</div>
+      </div>
+      <div class="forecast__cards" data-forecast></div>
+      <div class="highlights">
+        <h1 class="highlights__header">Today's Highlights</h1>
+        <div class="highlights__cards">
+          <div class="highlights__cards-card">
+            <h3 class="highlights__cards-card__header">Wind status</h3>
+            <div class="highlights__cards-card__value">
+              <span class="value" data-wind></span>mph
+            </div>
+          </div>
+          <div class="highlights__cards-card">
+            <h3 class="highlights__cards-card__header">Humidity</h3>
+            <div class="highlights__cards-card__value">
+              <span class="value" data-humidity></span>%
+            </div>
+            <div class="highlights__cards-card__bar">
+              <div class="highlights__cards-card__bar-digits">
+                <span>0</span>
+                <span>50</span>
+                <span>100</span>
+              </div>
+              <div class="highlights__cards-card__bar-container">
+                <div class="progress" data-bar></div>
+              </div>
+              <div class="percent">%</div>
+            </div>
+          </div>
+          <div class="highlights__cards-card">
+            <h3 class="highlights__cards-card__header">Visibility</h3>
+            <div class="highlights__cards-card__value">
+              <span class="value" data-visibility></span>miles
+            </div>
+            </div>
+          <div class="highlights__cards-card">
+            <h3 class="highlights__cards-card__header">Air pressure</h3>
+            <div class="highlights__cards-card__value">
+              <span class="value" data-pressure></span>mb
+            </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

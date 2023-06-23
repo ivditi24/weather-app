@@ -1,0 +1,87 @@
+@use "../util/" as *;
+
+.highlights {
+  width: 100%;
+  &__header {
+    color: white;
+    font-size: 3rem;
+    margin: 1em 0;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 204px 160px;
+    gap: 4em;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    &-card {
+      background-color: var(--bg-card);
+      padding: 2.2em 9em;
+      @include flex(column, center, center);
+      gap: 2em;
+      color: var(--card-text);
+      font-family: "Raleway";
+
+      &__header {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+
+      &__value {
+        font-size: 3rem;
+
+        .value {
+          font-weight: 700;
+          font-size: 4.2rem;
+          margin-right: 0.1em;
+        }
+      }
+
+      &__direction {
+        font-size: 1.8rem;
+        @include flex(row, center, center);
+        gap: 0.2em;
+
+        .icon {
+          background-color: var(--grey);
+          color: white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &__bar {
+        @include flex(column, center, space-between);
+        width: 230px;
+
+        &-digits {
+          @include flex(row, space-between, center);
+          gap: 3em;
+        }
+
+        &-container {
+          height: 8px;
+          background-color: var(--card-text);
+          border-radius: 80px;
+          position: relative;
+
+          .progress {
+            background-color: var(--bar);
+            height: 100%;
+            width: 100px;
+            border-radius: 80px;
+          }
+        }
+
+        .percent {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

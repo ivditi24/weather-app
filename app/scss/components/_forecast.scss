@@ -1,0 +1,41 @@
+@use "../util/" as *;
+
+.forecast__cards {
+  flex-wrap: wrap;
+  @include flex(row, space-between, center);
+  width: 100%;
+  gap: 1.5em;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &-card {
+    background-color: var(--bg-card);
+    padding: 1.3em 2.2em;
+    @include flex(column, center, center);
+    gap: 0.7em;
+    font-size: 1.6rem;
+    color: var(--card-text);
+    font-family: "Raleway";
+    white-space: nowrap;
+    flex: 1;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &__icon {
+      width: 55px;
+    }
+
+    &__time {
+      @include flex(row, space-between, center);
+      gap: 0.7em;
+
+      &-night {
+        color: var(--current-weather-text);
+      }
+    }
+  }
+}
